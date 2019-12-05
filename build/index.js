@@ -1,0 +1,7 @@
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+const webapi_1 = require("./webapi");
+const api = new webapi_1.WebApi();
+api.start();
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFZLENBQUE7O0FBRVoscUNBQWlDO0FBRWpDLE1BQU0sR0FBRyxHQUFXLElBQUksZUFBTSxFQUFFLENBQUE7QUFDaEMsR0FBRyxDQUFDLEtBQUssRUFBRSxDQUFBIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnXG5cbmltcG9ydCB7IFdlYkFwaSB9IGZyb20gJy4vd2ViYXBpJ1xuXG5jb25zdCBhcGk6IFdlYkFwaSA9IG5ldyBXZWJBcGkoKVxuYXBpLnN0YXJ0KClcbiJdLCJzb3VyY2VSb290IjoiLi4vLi4vLi4vLi4vYnVpbGQifQ==

@@ -1,0 +1,17 @@
+app:
+    ssid: "test33"
+
+discord:
+    token: ""
+    cmd_id: "!id"
+    cmd_verify: "!verify"
+    hasPermission: "ADMINISTRATOR"
+    embedColor: "#0099ff"
+
+message:
+    no_permission: "sorry, you can generate an id only with admin privilege."
+    header_generate_new_token: "hey take a other look, so much has change. We redevelop our Discord Bot. More features and performance upgrades."
+    invalied_verify_cmd: "please use this debug function correctly. `!verify <jwt-token>`"
+    jwt_token_incorrect: ":no_entry:  This jwt token is incorrect. Please generate a new token. `!id`"
+    jwt_token_correct: ":white_check_mark: This jwt token is correct. You can use it for this channel."
+    jwt_token_correct_but_wrong_channel: ":negative_squared_cross_mark: This jwt token is correct. **But** the token is for channel: `{channelid}` You can't use this token for this channel!"
