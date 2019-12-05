@@ -40,33 +40,48 @@ export class WebApi {
                 next();
             });
         });
-        app.get("/api/msteams/notification", function(req: any, res: any){
+        app.post("/api/msteams/notification", function(req: any, res: any){
+            console.log("   > Send " + JSON.stringify(req.body))
+            try{
+                if (req.body.embed == undefined || req.body.message == undefined || req.body.url == undefined){
+                    console.log("[->] Request property not set.")
+                    return   res.status(400).json({
+                        status: 400,
+                        message: "Your json body need the property (embed:bool) (message:string) (url:string)"
+                    });
+                }
+            }catch(e){
+                console.log("ERROR! :: " + JSON.stringify(req.body))
+            }
+            console.log("-> URL :: " + req.body.url)
+            const webhook = new IncomingWebhook(req.body.url);
             
-            
-            const webhook = new IncomingWebhook(/** TODO webhook from request*/);
-            (async () => {
-            await webhook.send(JSON.stringify({
-                "@type": "MessageCard",
-                "@context": "https://schema.org/extensions",
-                "summary": "Issue 176715375",
-                "themeColor": "0078D7",
-                "title": "Issue opened: \"Push notifications not working\"",
-                "sections": [
-                    {
-                        "activityTitle": "Miguel Garcie",
-                        "activitySubtitle": "9/13/2016, 11:46am",
-                        "activityImage": "https://connectorsdemo.azurewebsites.net/images/MSC12_Oscar_002.jpg",
-            
-                        "text": "There is a problem with Push notifications, they don't seem to be picked up by the connector."
-                    }
-                ]
-            })
-            );
-            })();
+            if (req.body.embed){
+                webhook.send(JSON.stringify({
+                    "@type": "MessageCard",
+                    "@context": "https://schema.org/extensions",
+                    "summary": "2 new Yammer posts",
+                    "themeColor": "3E94EB",
+                    "title": "Support++",
+                    "sections": [{
+                        "text": req.body.message,
+                    }]
+                }));
+            }else{
+                webhook.send(JSON.stringify({
+                    "text": req.body.message
+                }));
+            }
+            res.status(200).json({
+                status: 200,
+                id: "oke send"
+            });
+      
         })
+    
 
-        app.listen(3000, function () {
-        console.log('Example app listening on port 3000!');
+        app.listen(3001, function () {
+        console.log('Example app listening on port 3001!');
 
         });
     }
