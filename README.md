@@ -1,5 +1,5 @@
 
-![Discord|690x388,100%](https://meta.support-pp.de/uploads/default/original/1X/e886fc655e0568a840e5a0f5fb955ce4e7f2e180.png)
+![Discord|690x388,100%](https://meta.support-pp.de/uploads/default/original/1X/181244a28f4bb8671901c5d314bea409929f4af8.jpeg)
 # MsTeamsBot
 This is the offical Microsoft Teams Bot to send messages from Sinuusbot Support++ to your discord channel. You can use the hosted version by Support++ or set up your own.
 
