@@ -37,7 +37,7 @@
 		"express-rate-limit": "^5.2.5",
 		"fs": "^0.0.1-security",
 		"jsonwebtoken": "^8.5.1",
-		"ms-teams-webhook": "^1.0.3",
+		"ms-teams-webhook": "^1.0.4",
 		"yamljs": "^0.3.0"
 	}
 }
