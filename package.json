@@ -32,7 +32,7 @@
 	},
 	"dependencies": {
 		"config-yml": "^0.10.3",
-		"discord.js": "^11.3.2",
+		"discord.js": "^12.5.3",
 		"express": "^4.17.1",
 		"express-rate-limit": "^5.2.5",
 		"fs": "^0.0.1-security",
