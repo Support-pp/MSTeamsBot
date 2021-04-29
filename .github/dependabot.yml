@@ -1,0 +1,25 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: discord.js
+    versions:
+    - 12.5.1
+    - 12.5.2
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.24
+  - dependency-name: express-rate-limit
+    versions:
+    - 5.2.3
+  - dependency-name: dot-prop
+    versions:
+    - 4.2.1
+  - dependency-name: typescript
+    versions:
+    - 3.9.7
