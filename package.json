@@ -28,7 +28,7 @@
 		"nodemon": "^2.0.7",
 		"tslint": "^5.20.0",
 		"tslint-eslint-rules": "^5.1.0",
-		"typescript": "^3.9.8"
+		"typescript": "^3.9.10"
 	},
 	"dependencies": {
 		"config-yml": "^0.10.3",
